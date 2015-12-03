@@ -6,7 +6,7 @@ import (
 )
 
 // Get original destination from redirect of iptables.
-func (c *conn) GetOriginalDestination(addr *TCPAddr, err error) {
+func (c *conn) GetOriginalDestination() (addr *TCPAddr, err error) {
     if !c.ok() {
         err = os.ErrInvalid
         return
